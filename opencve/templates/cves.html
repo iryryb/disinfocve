@@ -10,7 +10,7 @@ CVE
 {% elif request.args.get('cwe') %}
 CWE-{{ request.args.get('cwe') }} CVE
 {% else %}
-Vulnerabilities (CVE)
+Disinformation Cases
 {% endif %}
 - {{ super() }}
 {% endblock %}
@@ -19,10 +19,10 @@ Vulnerabilities (CVE)
 {% from "_macros.html" import render_tag %}
 
 <section class="content-header">
-    <h1>Vulnerabilities (CVE)</h1>
+    <h1>Disinformation Cases</h1>
     <ol class="breadcrumb">
         <li><a href="{{ url_for('main.home') }}">DisInfo CVE</a></li>
-        <li class="active">Vulnerabilities (CVE)</li>
+        <li class="active">Disinformation Cases</li>
     </ol>
 </section>
 
@@ -183,7 +183,7 @@ Vulnerabilities (CVE)
 
                 <div class="info-box-content">
                     <span class="info-box-text">Total</span>
-                    <span class="info-box-number">{{ cves.total }} CVE</span>
+                    <span class="info-box-number">{{ cves.total }} cases</span>
                 </div>
             </div>
         </div>
@@ -196,12 +196,12 @@ Vulnerabilities (CVE)
                 <div class="box-body table-responsive no-padding">
                     <table class="table" id="cves">
                         <thead>
-                        <th>CVE</th>
-                        <th>Vendors</th>
-                        <th>Products</th>
+                        <th>Case</th>
+                        <th>Media</th>
+                        <th>Publications</th>
                         <th class="text-center">Updated</th>
-                        <th class="text-center">CVSS v2</th>
-                        <th class="text-center">CVSS v3</th>
+                        <th class="text-center">Severity</th>
+                        <th class="text-center">Scale</th>
                         </thead>
                         {% for cve in cves.items %}
                         <tr class="cve-header">
