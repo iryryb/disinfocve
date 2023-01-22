@@ -111,13 +111,13 @@
                 {% endif %}
                 <li {% if is_active(
                 "main.cves,main.cve") %}class="active"{% endif %}><a href="{{ url_for('main.cves') }}"><i
-                    class="fa fa-shield"></i> <span>Vulnerabilities (CVE)</span></a></li>
+                    class="fa fa-shield"></i> <span>Disinformation Cases</span></a></li>
                 <li {% if is_active(
                 "main.vendors,main.products") %}class="active"{% endif %}><a href="{{ url_for('main.vendors') }}"><i
-                    class="fa fa-tags"></i> <span> Vendors & Products (CPE)</span></a></li>
+                    class="fa fa-tags"></i> <span> Sources and Topics</span></a></li>
                 <li {% if is_active(
-                "main.cwes") %}class="active"{% endif %}><a href="{{ url_for('main.cwes') }}"><i
-                    class="fa fa-sitemap"></i> <span> Categories (CWE)</span></a></li>
+                "main.cwes") %}class="active"{% endif %}><a href="{ url_for('main.cwes') }}"><i
+                    class="fa fa-sitemap"></i> <span> Categories of Disinformation</span></a></li>
             </ul>
 
         </section>
